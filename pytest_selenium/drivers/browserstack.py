@@ -10,7 +10,7 @@ from pytest_selenium.drivers.cloud import Provider
 
 class BrowserStack(Provider):
 
-    API = "https://www.browserstack.com/automate/sessions/{session}.json"
+    API = "https://api.browserstack.com/automate/sessions/{session}.json"
 
     @property
     def auth(self):
@@ -18,7 +18,7 @@ class BrowserStack(Provider):
 
     @property
     def executor(self):
-        return "https://hub.browserstack.com/wd/hub"
+        return "https://hub=cloud.browserstack.com/wd/hub"
 
     @property
     def username(self):
